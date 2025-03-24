@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bhubaneswar Local Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bhubaneswar Local</h1>
+        <input type="text" id="searchInput" placeholder="Search Listings...">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="restaurant">Restaurants</option>
+            <option value="cafe">Cafes</option>
+            <option value="shopping">Shopping</option>
+            <option value="services">Services</option>
+        </select>
+    </header>
+    <main>
+        <div id="listings">
+            <div class="listing" data-category="restaurant" data-name="Restaurant A">
+                <h2>Restaurant A</h2>
+                <p>Address: ...</p>
+                <a href="https://maps.google.com/?q=...">Map</a>
+            </div>
+            <div class="listing" data-category="cafe" data-name="Cafe B">
+                <h2>Cafe B</h2>
+                <p>Address: ...</p>
+                <a href="https://maps.google.com/?q=...">Map</a>
+            </div>
+            <div class="listing" data-category="shopping" data-name="Shop C">
+                <h2>Shop C</h2>
+                <p>Address: ...</p>
+                <a href="https://maps.google.com/?q=...">Map</a>
+            </div>
+            <div class="listing" data-category="services" data-name="Service D">
+                <h2>Service D</h2>
+                <p>Address: ...</p>
+                <a href="https://maps.google.com/?q=...">Map</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Bhubaneswar Local</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
