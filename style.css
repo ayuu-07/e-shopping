@@ -1,0 +1,22 @@
+/* Basic CSS */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#listings {
+    padding: 20px;
+}
+
+.listing {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+/* Add more styling */
