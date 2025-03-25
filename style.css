@@ -1,22 +1,39 @@
-/* Basic CSS */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const sortOptions = document.getElementById("sortOptions");
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const listingsContainer = document.getElementById("listings");
+    let listings = Array.from(document.querySelectorAll(".listing"));
 
-header {
-    background-color: #f0f0f0;
-    padding: 20px;
-}
+    const filterListings = () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
 
-#listings {
-    padding: 20px;
-}
+        listings.forEach(listing => {
+            const nameMatch = listing.dataset.name.toLowerCase().includes(searchTerm);
+            const categoryMatch = !category || listing.dataset.category === category;
 
-.listing {
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-/* Add more styling */
+            listing.style.display = nameMatch && categoryMatch ? "block" : "none";
+        });
+    };
+
+    const sortListings = () => {
+        const order = sortOptions.value;
+        listings.sort((a, b) => {
+            let nameA = a.dataset.name.toLowerCase();
+            let nameB = b.dataset.name.toLowerCase();
+            return order === "az" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        });
+        listings.forEach(listing => listingsContainer.appendChild(listing));
+    };
+
+    const toggleDarkMode = () => {
+        document.body.classList.toggle("dark-mode");
+    };
+
+    searchInput.addEventListener("input", filterListings);
+    categoryFilter.addEventListener("change", filterListings);
+    sortOptions.addEventListener("change", sortListings);
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+});
