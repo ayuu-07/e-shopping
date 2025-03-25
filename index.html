@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhubaneswar Local Directory</title>
-    <link rel="stylesheet" href="Create style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bhubaneswar Local</h1>
+        <h1>Bhubaneswar Local Directory</h1>
         <input type="text" id="searchInput" placeholder="Search Listings...">
         <select id="categoryFilter">
             <option value="">All Categories</option>
@@ -15,34 +17,42 @@
             <option value="shopping">Shopping</option>
             <option value="services">Services</option>
         </select>
+        <select id="sortOptions">
+            <option value="az">Sort: A-Z</option>
+            <option value="za">Sort: Z-A</option>
+        </select>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
     </header>
+
     <main>
         <div id="listings">
-            <div class="listing" data-category="restaurant" data-name="Restaurant A">
+            <div class="listing" data-category="restaurant" data-name="restaurant a">
                 <h2>Restaurant A</h2>
-                <p>Address: ...</p>
-                <a href="https://maps.google.com/?q=...">Map</a>
+                <p>Address: Bhubaneswar, Odisha</p>
+                <a href="https://maps.google.com/?q=Bhubaneswar" target="_blank">View on Map</a>
             </div>
-            <div class="listing" data-category="cafe" data-name="Cafe B">
+            <div class="listing" data-category="cafe" data-name="cafe b">
                 <h2>Cafe B</h2>
-                <p>Address: ...</p>
-                <a href="https://maps.google.com/?q=...">Map</a>
+                <p>Address: Bhubaneswar, Odisha</p>
+                <a href="https://maps.google.com/?q=Bhubaneswar" target="_blank">View on Map</a>
             </div>
-            <div class="listing" data-category="shopping" data-name="Shop C">
+            <div class="listing" data-category="shopping" data-name="shop c">
                 <h2>Shop C</h2>
-                <p>Address: ...</p>
-                <a href="https://maps.google.com/?q=...">Map</a>
+                <p>Address: Bhubaneswar, Odisha</p>
+                <a href="https://maps.google.com/?q=Bhubaneswar" target="_blank">View on Map</a>
             </div>
-            <div class="listing" data-category="services" data-name="Service D">
+            <div class="listing" data-category="services" data-name="service d">
                 <h2>Service D</h2>
-                <p>Address: ...</p>
-                <a href="https://maps.google.com/?q=...">Map</a>
+                <p>Address: Bhubaneswar, Odisha</p>
+                <a href="https://maps.google.com/?q=Bhubaneswar" target="_blank">View on Map</a>
             </div>
         </div>
     </main>
+
     <footer>
-        <p>© 2024 Bhubaneswar Local</p>
+        <p>© 2024 Bhubaneswar Local Directory</p>
     </footer>
-    <script src="Create script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
